@@ -9,7 +9,7 @@ function onError(e) {
 function createPinnedTab() {
   browser.tabs.create(
     {
-      url: "https://inbox.google.com",
+      url: "https://www.indeed.com/",
       pinned: true,
       active: true
     }
@@ -39,7 +39,7 @@ function handleSearch(inboxTabs) {
 function handleClick(tab) {
   //console.log("*********Button clicked*********");
   currentTabId = tab.id;
-  var querying = browser.tabs.query({url: "*://inbox.google.com/*"});
+  var querying = browser.tabs.query({url: "*://*.indeed.com/*"});
   querying.then(handleSearch, onError);
 };
 
